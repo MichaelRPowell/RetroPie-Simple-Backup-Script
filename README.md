@@ -1,3 +1,14 @@
+# Fork Differences
+
+The default script works great. I suggest everyone use that, and customize how they want. I made a few changes that might be important to some people.
+
+  1. File extensions .sav, .srm, .fs, .cfg, and .state are all saved from the roms directory. Only .sav and .srm are saved in the default script. These other file extensions are for additional systems, and MAME/NEOGEO game configurations you might setup. The .state extensions is important for anyone using save states.
+  2. I changed the folder names. The 1.4 script had "July" I changed it it to "07". The default for the 1.5 script now does "07-July", but I felt month name wasn't necessary.
+  3. Filenames follow the same convetion as the directories, with the largest to smallest amount of time: Year - Month - Day - Hour - Minute - Second. Default script has filenames as: Hour - Minute - Second - Month - Day - Year. My naming works better for sorting if you put them all in one folder.
+  4. I have my script run every hour at the 59 minute mark. To keep from having 24 archives a day, the script removes all previous archives generated that day. Only the last archive made is kept for each day. This helps save space on the SD card and save very minimal space on Google Drive. My archive is around 10 megabytes. This does not prevent it from uploading 24 archives, it just prevents it from storing each of those iterations permanently.
+  5. I created another variable for the location of drive. I personally don't like it in the roms folder.
+  6. I commented out the pull. This might conflict with the commands to remove previous archives. I don't need to pull, I only plan to restore from the latest archive if the SD card fails. This is completely up to user preference though.
+
 # RetroPie / RecalBox Simple Backup Script
 Hey guys!
  
