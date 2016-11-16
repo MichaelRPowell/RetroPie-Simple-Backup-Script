@@ -49,6 +49,6 @@ echo "And md5 created for verification!"
 echo " "
 echo "Uploading to Google Drive..."
 cd $backupDir/$archiveFolderName
-$driveDir/drive push
+$driveDir/drive push -quiet
 echo " "
 echo Complete!
