@@ -8,10 +8,10 @@ workingDir="/home/pi/RetroPie/roms/"
 #Directory where drive program is located.
 driveDir="/home/pi/"
 #Save bacup location
-backupDir="/home/pi/rpbackups"
+backupDir="/home/pi"
 #Name for the root backups folder (will be placed INSIDE of your 'backup location'
 archiveFolderName="RetroPiSaves"
-#Suffex to append to the end of all backups (example: "-backups") NO SPACES ALLOWED! (Don't use "MY BACK UPS"!!!) 
+#Suffex to append to the end of all backups (example: "-backups") NO SPACES ALLOWED! (Don't use "MY BACK UPS"!!!)
 backupSuffex=""
 #backup dir may be relitive.
 cd $backupDir
@@ -32,9 +32,9 @@ timestamp="$(date +'%Y-%m-%d_%H.%M.%S')"
 #timestamp="$(date +'%H.%M.%S_%m-%d-%Y')"
 #Proper format
 #timestamp="$(date +'%H.%M.%S_%d-%m-%Y')"
-[ -d $backupDir ] || mkdir $backupDir 
+[ -d $backupDir ] || mkdir $backupDir
 [ -d $backupDir/$archiveFolderName ] || mkdir $backupDir/$archiveFolderName
-[ -d $backupDir/$archiveFolderName/$Y ] || mkdir $backupDir/$archiveFolderName/$Y 
+[ -d $backupDir/$archiveFolderName/$Y ] || mkdir $backupDir/$archiveFolderName/$Y
 [ -d $backupDir/$archiveFolderName/$Y/$M ] || mkdir $backupDir/$archiveFolderName/$Y/$M
 [ -d $backupDir/$archiveFolderName/$Y/$M/$D ] || mkdir $backupDir/$archiveFolderName/$Y/$M/$D
 rm $backupDir/$archiveFolderName/$Y/$M/$D/*.zip
@@ -48,7 +48,7 @@ echo "Saved to $(date +'%Y-%m-%d_%H.%M.%S').zip"
 echo "And md5 created for verification!"
 echo " "
 echo "Uploading to Google Drive..."
-cd $backupDir
-$driveDir/drive push --fix-clashes
+cd $backupDir/$archiveFolderName
+$driveDir/drive push
 echo " "
 echo Complete!
