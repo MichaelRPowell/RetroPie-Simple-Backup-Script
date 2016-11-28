@@ -39,7 +39,7 @@ timestamp="$(date +'%Y-%m-%d_%H.%M.%S')"
 [ -d $backupDir/$archiveFolderName/$Y/$M/$D ] || mkdir $backupDir/$archiveFolderName/$Y/$M/$D
 rm $backupDir/$archiveFolderName/$Y/$M/$D/*.zip
 rm $backupDir/$archiveFolderName/$Y/$M/$D/*.md5
-find . | egrep "\.(sav|srm|fs|cfg|state.*)$" | zip -@ $backupDir/"$archiveFolderName"/$Y/$M/$D/"$timestamp"$backupSuffex.zip
+find . | egrep "\.(sav|srm|fs|nv|cfg|state.*)$" | zip -@ $backupDir/"$archiveFolderName"/$Y/$M/$D/"$timestamp"$backupSuffex.zip
 md5=($(md5sum "$backupDir"/"$archiveFolderName"/$Y/$M/$D/"$timestamp"$backupSuffex.zip))
 echo $md5 >> "$backupDir"/"$archiveFolderName"/$Y/$M/$D/"$timestamp"$backupSuffex.md5
 echo " "
