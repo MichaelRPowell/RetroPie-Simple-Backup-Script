@@ -10,7 +10,7 @@ driveDir="/home/pi/"
 #Save bacup location
 backupDir="/home/pi"
 #Name for the root backups folder (will be placed INSIDE of your 'backup location'
-archiveFolderName="RetroPiSaves"
+archiveFolderName="RetroPieSaves"
 #Suffex to append to the end of all backups (example: "-backups") NO SPACES ALLOWED! (Don't use "MY BACK UPS"!!!)
 backupSuffex=""
 #backup dir may be relitive.
