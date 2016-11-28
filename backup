@@ -17,7 +17,7 @@ backupSuffex=""
 cd $backupDir
 echo Syncing changes..
 #comment out for oneway sync vvv
-#/home/pi/.drive pull
+#$driveDir/drive pull
 echo " "
 echo Creating Save File backup now!
 echo " "
