@@ -6,7 +6,7 @@ echo " "
 #Directory where roms/saves are stored
 workingDir="/home/pi/RetroPie/roms/"
 #Directory where drive program is located.
-driveDir="/home/pi/"
+driveDir="/home/pi"
 #Save bacup location
 backupDir="/home/pi"
 #Name for the root backups folder (will be placed INSIDE of your 'backup location'
@@ -17,7 +17,7 @@ backupSuffex=""
 cd $backupDir
 echo Syncing changes..
 #comment out for oneway sync vvv
-#$driveDir/drive pull
+#/home/pi/.drive pull
 echo " "
 echo Creating Save File backup now!
 echo " "
@@ -49,6 +49,6 @@ echo "And md5 created for verification!"
 echo " "
 echo "Uploading to Google Drive..."
 cd $backupDir/$archiveFolderName
-$driveDir/drive push -quiet
+$driveDir/drive push -quiet -fix-clashes
 echo " "
 echo Complete!
