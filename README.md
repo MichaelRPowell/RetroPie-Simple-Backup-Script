@@ -8,6 +8,7 @@ The default script works great. I suggest everyone use that, and customize how t
   4. I have my script run every hour at the 59 minute mark. To keep from having 24 archives a day, the script removes all previous archives generated that day. Only the last archive made is kept for each day. This helps save space on the SD card and save very minimal space on Google Drive. My archive is around 10 megabytes. This does not prevent it from uploading 24 archives, it just prevents it from storing each of those iterations permanently.
   5. I created another variable for the location of drive. I personally don't like it in the roms folder.
   6. I commented out the pull. This might conflict with the commands to remove previous archives. I don't need to pull, I only plan to restore from the latest archive if the SD card fails. This is completely up to user preference though.
+  7. Added ARMv7 drive executable. Release v0.3.8 (HiatusReturnIsAComingOfAge) 2016/09/28. https://github.com/odeke-em/drive/releases
 
 # RetroPie / RecalBox Simple Backup Script
 Hey guys!
